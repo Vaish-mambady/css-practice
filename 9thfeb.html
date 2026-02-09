@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="9thfebstyle.css">
+        <style> /*internal css*/
+            p { /*selector*/
+              color: red;
+              text-align: center;
+            } 
+            #para1 {
+                text-align: center;
+                color: rgb(53, 63, 163);
+            }
+            p.center {
+                text-align: center;
+                color: rgb(252, 5, 169);
+            }
+            * {
+                font-weight: 200;
+            }
+            div{
+                background-color: green;
+            }
+            div.first{
+                opacity: 0.1;
+            }
+            div.second{
+                opacity: 0.3;
+            }
+            div.third{
+                opacity: 0.6;
+            }
+            div.fourth{
+                background-color: rgba(255, 0, 0, 0.3);
+            }
+            .bgr{
+                background-image: url("flat-design-pixel-art-cloud-illustration.jpg");
+                background-repeat: repeat-x;
+                background-size: 60px;
+                /*no repeat property used to show only once*/
+                background-position: bottom; /*position of the image*/
+                background-attachment: fixed; /*image will stay fixed when scrolling*/
+            }
+            p.dotted {border-style: dotted; border-width: 2px;} /*all sides*/
+            p.dashed {border-style: dashed; border-width: 2px 4px;} /*top and bottom 2px, left and right 4px*/
+            p.solid {border-style: solid; border-width: 2px 4px 6px 8px;} /*top 2px, right 4px, bottom 6px, left 8px*/
+            p.double {border-style: double; border-color: rgb(215, 180, 50);}
+            p.groove {border-style: groove;border-color: red green blue yellow;} /*creates a carved effect with different colors on each side*/
+            p.ridge {border-style: ridge; border-radius: 5px; padding: 5px;} /*creates rounded corners and adds space between content and border*/
+            p.inset {border-style: inset;}
+            p.outset {border-style: outset;}
+            p.none {border-style: none;}
+            p.hidden {border-style: hidden;}
+            p.mix {border-style: dotted dashed solid double;}/*top dotted, right dashed, bottom solid, left double*/
+
+        </style>
+    </head>
+    <body>
+        <p>Hello World!</p>
+        <p>These paragraphs are styled with CSS.</p>
+        <p>Css is cascading style sheet used for styling web pages</p>
+        <!--id selectors uses #, cant start with number-->
+        <p id="para1">Hello World!</p>
+        <!--class selector uses .(period)-->
+        <h1 class="center">pink and center-aligned heading</h1>
+        <!--can also mention specifically which elt to be effected-->
+        <p class="center">pink center-aligned heading</p>
+        <h2>Css universal selector slects all elts using *</h2>
+        <h4>css grouping selector selects all elts with the same styles, use with comma</h4>
+        <p>CSs three ways to add : internal, external, inline</p>
+        <br>
+        <h3>External using .css sheet</h3>
+        <P>In head the link is mentioned using the link tag</P>
+        <br>
+        <h3>Internal using style tag</h3>
+        <P>In head the style tag is used to write css code</P>
+        <br>
+        <h3>Inline using style attribute</h3>
+        <P style="color: green; text-align: center;">In the element itself the style attribute is used to write css code</P>
+        <br>
+        <h3>CSS multiple style sheets</h3>
+        <P>Multiple style sheets can be used in a single HTML document. The styles are applied in the order they are linked or defined, with later styles overriding earlier ones if there are conflicts.</P>
+        <br>
+        <h3>Cascading order</h3>
+        <p>The cascading order determines which styles are applied when multiple CSS rules target the same element. 
+            <br>The order is: 1) Inline styles, 2) Internal styles and External styles, 3) Browser default styles.</p>
+        <br>
+        <h2>css comments</h2>
+        <p>They are written using /* comment */ syntax.</p>
+        <br>
+        <h1>css colors</h1>
+        <h1>css bgcolors</h1>
+        <h1 style="background-color:Tomato;">Tomato</h1>
+        <h1 style="background-color:Orange;">Orange</h1>
+        <h1 style="background-color:DodgerBlue;">DodgerBlue</h1>
+        <h1 style="background-color:MediumSeaGreen;">MediumSeaGreen</h1>
+        <h1 style="background-color:Gray;">Gray</h1>
+        <h1 style="background-color:SlateBlue;">SlateBlue</h1>
+        <h1 style="background-color:Violet;">Violet</h1>
+        <h1 style="background-color:LightGray;">LightGray</h1>
+        <br>
+        <h1>css text colors</h1>
+        <h1 style="color:Tomato;">Tomato color</h1>
+        <br><br>
+        <h1>CSS borders</h1>
+        <h1 style="border: 12px dashed Tomato;">Tomato dashed border</h1>
+        <!--color values can be specified as rgb,hex,hsl values etc-->
+        <p>Background color and opactiy </p>
+        <h1>Transparent Boxes</h1>
+        <div class="first">
+            <h1>opacity 0.1</h1>
+            <h2>abc</h2>
+        </div>
+        <div class="second">
+            <h1>opacity 0.3</h1>
+        </div>
+        <div class="third">
+            <h1>opacity 0.6</h1>
+        </div>
+        <div>
+            <h1>opacity 1 (default)</h1>
+        </div>
+        <p>otherwise can apply opacity by rgba(red,green,blue,alpha) color values. alpha is from 0(transparent) to 1(opaque)</p>
+        <div class="fourth">
+            <h1>30% opactiyt</h1>
+        </div>
+        <h1>Css background repeat</h1>
+        <p class="bgr">can repeat images, can specify horizontally or vertically.
+            <br>
+            <br>
+            <br>
+            <br>
+            <h4>CSS BORDERS</h4>
+            <p class="dotted">A dotted border.</p>
+            <p class="dashed">A dashed border.</p>
+            <p class="solid">A solid border.</p>
+            <p class="double">A double border.</p>
+            <p class="groove">A groove border.</p>
+            <p class="ridge">A ridge border.</p>
+            <p class="inset">An inset border.</p>
+            <p class="outset">An outset border.</p>
+            <p class="none">No border.</p>
+            <p class="hidden">A hidden border.</p>
+            <p class="mix">A mixed border.</p>
+
+        </p>
+        
+    </body>
+</html>
