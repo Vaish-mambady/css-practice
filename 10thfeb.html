@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+            div.one{
+                border: 1px solid black;
+                margin-top: 100px;
+                margin-bottom: 100 px;
+                margin-left: 80px;
+                margin-right: 150px;
+                background-color: lightblue;
+                /*can use margin property directly instead of top right bottom left
+                syntax: margin: top right bottom left
+                */
+            }
+            div.two{
+                border: 1px solid black;
+                background-color: darkseagreen;
+                padding-top: 50px;
+                padding-right: 30px;
+                padding-bottom: 50px;
+                padding-left: 80px;
+                /*can use padding shorthand property 
+                syntax: padding: top right bottom left
+                */
+            }
+            div.three{
+                height: 200px;
+                width: 50%;
+                background-color: plum;
+            }
+            div.four{
+                width: 1000px;
+                max-width: 500px;
+                height: 100px;
+                background-color: darkkhaki;
+            }
+            div.five {
+            background-color: lightgrey;
+            width: 300px;
+            border: 15px solid green;
+            padding: 50px;
+            margin: 20px;
+            }
+            p {outline-color:red;}
+            p.dotted {outline-style: dotted;border: 15px solid green;}
+            p.dashed {outline-style: dashed;}
+            p.solid {outline-style: solid;}
+            p.double {outline-style: double;}
+            p.groove {outline-style: groove;}
+            p.ridge {outline-style: ridge;}
+            p.inset {outline-style: inset;}
+            p.outset {outline-style: outset;}
+            p.offset{margin:30px;padding: 50px; border: 1px solid black; outline: 1px solid red; outline-offset: 5px;}
+            h1.color{color:mintcream; background-color:darkolivegreen;}
+            div.text {
+            border: 1px solid black;
+            padding: 10px;
+            width: 200px;
+            height: 200px;
+            text-align: justify;
+            }
+            h1.decor{text-decoration: overline;}
+            p.decor2{text-decoration: wavy underline;}
+            p.texttranf{text-transform: capitalize;}
+            p.indent{text-indent: 50px;}
+            p.spacing{letter-spacing: -1px;}
+            p.lineheight{ line-height: 0.8;}
+            p.wordspace{word-spacing: 30px;}
+            p.white{white-space: nowrap;}
+            p.shadow{color:blue;text-shadow: 12px 2px 2px black;}/*for height width blur-effect and colour*/
+            p.p3{font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+            p.oblique{font-style: oblique;}
+            p.fontweight{font-weight:bolder;}
+            p.fvariant{font-variant: small-caps;}
+            p.fontsize{font-size: 60px;}
+            p.responsive{font-size: 10vw;}
+            p.googlefont{
+            font-family: "Sofia", sans-serif;
+            font-size: 30px;
+            }
+
+        </style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire|neon|outline|emboss|shadow-multiple">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+        <h1>CSS MARGINS</h1>
+        <div class="one">top 100, bottom 100, right 150, left 80px.</div>
+        <p>margin creates space around element</p>
+        <h1>CSS PADDING</h1>
+        <div class="two">This div element has a top padding of 50px, a right padding of 30px, a bottom padding of 50px, and a left padding of 80px</div>
+        <h1>CSS HEIGHT AND WIDTH</h1>
+        <p>dont include padding, borders, margins <br>
+        auto is default value, others: lenght,%,initial,inherit</p>
+        <div class="three">height 200 px, width 50%</div>
+        <h1>MAX WIDTH</h1>
+        <div class="four">sets max width of an elt. spcifed in lenght values or none. <br>
+        browser window smaller than width of elt => problem <bR>
+        can use max width to handle this. </div>
+        <h1>CSS BOX MODEL</h1>
+        <div class="five">margin-border-padding-content. This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <h1>CSS OUTLINE</h1>
+        <div>it is a line drawn outsdide elt border, makes elt stand out. <br>
+        css has outline style, color,width,offset</div>
+        <p class="dotted">A dotted outline</p>
+        <p class="dashed">A dashed outline</p>
+        <p class="solid">A solid outline</p>
+        <p class="double">A double outline</p>
+        <p class="groove">A groove outline. The effect depends on the outline-color value.</p>
+        <p class="ridge">A ridge outline. The effect depends on the outline-color value.</p>
+        <p class="inset">An inset outline. The effect depends on the outline-color value.</p>
+        <p class="outset">An outset outline. The effect depends on the outline-color value.</p>
+        <br>
+        <h1>CSS OUTLINE OFFSET</h1>
+        <p class="offset">adds space between an outline and the edge/border of an element</p>
+        <br>
+        <h1 class="color">text colour and background colour</h1>
+        <h1>text alignment</h1>
+        <div class="text">text alignments are left right center justify. all lines are equally spaced</div>
+        <h1 class="decor">CSS TEXT DECORATION</h1>
+        <p class="decor2">adds decoration line on text </p>
+        <br>
+        <h1>CSS TEXT TRANSFORMATION</h1>
+        <p>Specifies uppercase or lowercase or capitalize first letter of each word</p>
+        <p class="texttranf">this is an example</p>
+        <h1>CSS TEXT INDENTATION</h1>
+        <P class="indent">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla accusamus id, doloribus cum, molestiae, commodi veritatis harum libero nostrum nemo doloremque dignissimos mollitia sapiente corporis delectus aperiam quos temporibus placeat.</P>
+        <br>
+        <h1>CSS LETTER SPACING</h1>
+        <p class="spacing">this uses letter spacing -1px</p>
+        <br>
+        <h1>CSS LINE HEIGHT</h1>
+        <p class="lineheight">this is a smaller line height <br> this is a smaller line height</p>
+        <br>
+        <h1>CSS WORD SPACING</h1>
+        <p class="wordspace">this has more word spacing</p>
+        <br>
+        <h1>CSS WHITE SPACE</h1>
+        <p class="white">
+            This is some text that will not wrap.
+            This is some text that will not wrap.
+            This is some text that will not wrap.
+            This is some text that will not wrap.
+            This is some text that will not wrap.
+            This is some text that will not wrap.
+            This is some text that will not wrap.
+            This is some text that will not wrap.
+
+        </p>
+        <br>
+        <h1>CSS TEXT SHADOW</h1>
+        <p class="shadow">This uses shadows here.</p>
+        <br>
+        <h1>CSS FONT FAMILY</h1>
+        <p class="p3">This is a paragraph, shown in the Lucida Console font.</p>
+        <br>
+        <h1>CSS FONT STYLE</h1>
+        <p class="oblique">This is oblique style paragraph</p>
+        <h1>CSS FONT WEIGHT, FONT VARIANT, FONT SIZE</h1>
+        <p class="fontweight">this paragraph is bolder fontweight.</p>
+        <p class="fvariant">This is font variant is small</p>
+        <p class="fontsize">This font size is larger, can use em instead of px</p>
+        <p class="responsive">uses vw , follows size of browser window</p>
+        <h1>CSS GOOGLE FONTS</h1>
+        <p class="googlefont">Font name is Sofia, it is styled with css.</p>
+        <h1>ENABLING FONT EFFECTS</h1>
+        <P>uses google font effects, add effect=effectname to googleAPI and ends with effectname</P>
+        <p class="googlefont font-effect-fire">This paragraph uses the fire effect on sofia font.</p>
+        <p class="googlefont font-effect-neon">This paragraph uses the neon effect on sofia font.</p>
+        <p class="googlefont font-effect-outline">This paragraph uses the outline effect on sofia font.</p>
+        <h1>CSS ICONS</h1>
+        <p>can use font awesome, add name of specified elts in inline html elts i and span.</p>
+        <i class="fa-duotone fa-users fa-bounce"></i>
+        <i class="fa fa-car"></i>
+        <i class="fa fa-car" style="font-size:48px;"></i>
+        <i class="fa fa-car" style="font-size:60px;color:red;"></i>
+        <h2>List Icons</h2>
+        <ul class="fa-ul">
+        <li><i class="fa-li fa fa-check-square"></i>List icons</li>
+        <li><i class="fa-li fa fa-spinner fa-spin"></i>List icons</li>
+        <li><i class="fa-li fa fa-square"></i>List icons</li>
+        </ul>
+        <h2>Spinner Icons</h2>
+        <i class="fa fa-spinner fa-spin"></i>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <i class="fa fa-refresh fa-spin"></i>
+        <i class="fa fa-cog fa-spin"></i>
+        <i class="fa fa-spinner fa-pulse"></i>
+        <h3><strong>Stacked icons:</strong></h3>
+        <span class="fa-stack">
+        <i class="fa fa-circle-thin fa-stack-2x"></i>
+        <i class="fa fa-twitter fa-stack-1x"></i>
+        </span>
+        fa-twitter on fa-circle-thin<br>
+        <span class="fa-stack">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+        </span>
+        <br>
+        <h1>BOOTSTRAP ICONS</h1>
+        <p>Some Bootstrap icons:</p>
+        <i class="glyphicon glyphicon-cloud"></i>
+        <i class="glyphicon glyphicon-remove"></i>
+        <i class="glyphicon glyphicon-user"></i>
+        <p>Styled Bootstrap icons (size and color):</p>
+        <i class="glyphicon glyphicon-cloud" style="font-size:24px;"></i>
+        <i class="glyphicon glyphicon-cloud" style="font-size:60px;color:lightblue;"></i>
+        <br>
+        <h1>GOOGLE ICONS</h1>
+        <p>Some Google icons:</p>
+        <i class="material-icons">traffic</i>
+        <p>Styled Google icons (size and color):</p>
+        <i class="material-icons" style="font-size:24px;color: cadetblue;">cloud</i>
+
+    </body>
+</html>
