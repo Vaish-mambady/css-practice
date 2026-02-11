@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            a.link1{color: blueviolet; text-decoration: none;}
+            a:link{color: red; background-color: tomato;}
+            a:visited{color: green; background-color: yellow;}
+            a:hover{color:hotpink; background-color: lightslategray;}
+            a:active{color: blue; background-color: yellowgreen;}
+            a.link2:link, a.link2:visited {
+            background-color: #f44336;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            }
+            ol.a{list-style-type:lower-alpha;}
+            ul.b{margin-left:200px; list-style-image: url("fish.gif");}
+            ol li{color:rgb(81, 56, 10); font-size:20px;}
+            ul li{background: #ffb778; padding: 7px;}
+            span{display: block;}
+            ul.c{display: inline;}
+            a{display: block;}
+            h1.hidden{display: none;}
+            table, th, td { 
+                border: 1px solid black;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th{
+                height: 70px;
+            }
+            table, th, td{
+                 text-align: right;
+                vertical-align: bottom;
+                }
+            th.padding, td.padding{
+                padding: 30px;
+                border-bottom: 1px solid #ddd;
+            }
+            tr.hover:hover {background-color: yellowgreen;}
+            tr.striped:nth-child(odd) {background-color: #778f95;}
+            th.striped{background-color: #ff8787;}
+            div.static {
+                position: static;
+                border: 3px solid #73AD21;
+                left:1000px;
+            }
+            div.relative {
+                position: relative;
+                width: 400px;
+                height: 200px;
+                border: 3px solid #73AD21;
+            }
+            div.fixed {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 300px;
+                border: 3px solid #73AD21;
+            }
+            div.absolute {
+                position: absolute;
+                top: 80px;
+                right: 0;
+                width: 200px;
+                height: 100px;
+                border: 3px solid #73AD21;
+            }
+            div.sticky {
+                position: -webkit-sticky; /* for safari browser */
+                position: sticky;
+                top: 0;
+                padding: 5px;
+                background-color: #cae8ca;
+                border: 2px solid #4CAF50;
+            }
+            img {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                z-index: -1;
+            }
+            div.visible {
+            background-color: #eee;
+            width: 200px;
+            height: 50px;
+            border: 1px dotted black;
+            overflow: visible;
+            }
+            div.hidden {
+            background-color: #eee;
+            width: 200px;
+            height: 50px;
+            border: 1px dotted black;
+            overflow: hidden;
+            }
+            div.scroll {
+            background-color: #eee;
+            width: 200px;
+            height: 100px;
+            border: 1px dotted black;
+            overflow: scroll;
+            }
+            div.auto {
+            background-color: #eee;
+            width: 200px;
+            height: 100px;
+            border: 1px dotted black;
+            overflow: auto;
+            }
+            div.xy{
+            background-color: #eee;
+            width: 200px;
+            height: 50px;
+            border: 1px dotted black;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            }
+            span.default {
+            display: inline; /* the default for span */
+            width: 10000px;
+            height: 10000px;
+            padding: 5px;
+            border: 1px solid blue;  
+            background-color: yellow; 
+            }
+            span.inline-block {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 1px solid blue;    
+            background-color: yellow; 
+            }
+            span.block {
+            display: block;
+            width: 200px;
+            height: 200px;
+            padding: 5px;
+            border: 1px solid blue;    
+            background-color: yellow; 
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS LINK STYLING</h1>
+        <p><b><a class="link1" href="https://www.codedex.io/home" target="_blank"> This is a link </a></b></p>
+        <p>link states: link,visited,hover,active</p>
+        <p>can use text decoration to remove underline from link,</p>
+        <p>bg color property can be used to set background color of link</p>
+        <h2>LINK BUTTON</h2>
+        <p><a class="link2" href="https://www.codedex.io/home" target="_blank"> This is a link button </a></p>
+        <h2>The cursor Property</h2>
+        <p>Mouse over the words to change the cursor.</p>
+        <span style="cursor:auto">auto</span><br>
+        <span style="cursor:crosshair">crosshair</span><br>
+        <span style="cursor:default">default</span><br>
+        <span style="cursor:e-resize">e-resize</span><br>
+        <span style="cursor:help">help</span><br>
+        <span style="cursor:move">move</span><br>
+        <span style="cursor:n-resize">n-resize</span><br>
+        <span style="cursor:ne-resize">ne-resize</span><br>
+        <span style="cursor:nw-resize">nw-resize</span><br>
+        <span style="cursor:pointer">pointer</span><br>
+        <span style="cursor:progress">progress</span><br>
+        <span style="cursor:s-resize">s-resize</span><br>
+        <span style="cursor:se-resize">se-resize</span><br>
+        <span style="cursor:sw-resize">sw-resize</span><br>
+        <span style="cursor:text">text</span><br>
+        <span style="cursor:w-resize">w-resize</span><br>
+        <span style="cursor:wait">wait</span><br>
+        <h1>CSS LISTS</h1>       
+        <ol class="a">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+        </ol>
+        <p>can aslo use image/gif as list marker</p>
+        <ul class="b">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+        </ul>       
+        <p>can also style list with colours</p>
+        <br>
+        <h1>DISPLAY PROPERTY</h1>
+        <p>specifies how how an elt is shown in web page, by defeault either block or inline, depends on elts</p>
+        <p>Display a list of links as a horizontal menu:</p>
+        <ul class="c">
+        <li><a href="/html/default.asp" target="_blank">HTML</a></li>
+        <li><a href="/css/default.asp" target="_blank">CSS</a></li>
+        <li><a href="/js/default.asp" target="_blank">JavaScript</a></li>
+        </ul>
+        <p>display span elt as blcok elt:</p>
+        <span>A display property with</span> 
+        <span>a value of "block" results in</span> 
+        <span>a line break between each span elements.</span>
+        <p>display links as block elements:</p>
+        <a href="/html/default.asp" target="_blank">HTML</a>
+        <a href="/css/default.asp" target="_blank">CSS</a>
+        <a href="/js/default.asp" target="_blank">JavaScript</a>
+        <p>can hide elements by setting display proeprty to none</p>
+        <h1 class="hidden">This is a hidden heading</h1>
+        <p>visibility hidden takes up space. display does not.</p>
+        <br><br>
+
+        <h1>CSS TABLE BORDER</h1>
+        <p>add border to table, add width to table 100% for full screen. <br>
+        collapse table borders into single border with border-collapse property
+        can set width and height of table using table size.
+        </p>
+        <table>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+            </tr>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+            </tr>
+        </table>
+
+        <H1>CSS HORIZONTAL ALIGNMENT, VERTICAL ALIGNMENT</H1>
+        <p>sets the horizontal alignment (like left, right, or center) of the content in th or td. <br>
+        and sets the vertical alignment (like top, middle, or bottom) of the content in th or td.</p>
+        <table class="align">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+            </tr>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+            </tr>
+        </table>
+
+        <H1>CSS TABLE PADDING, HORIZONTL DIVIDERS</H1>
+        <p>padding is the space between the content of the cell and its border. <br>
+        can set padding for th and td elements.</p>
+        <table>
+            <tr class="padding">
+                <th class="padding">Firstname</th>
+            </tr>
+            <tr class="padding">
+                <td class="padding">Peter</td>
+            </tr>
+        </table>
+
+        <h1>HOVERABLE TABLE</h1>
+         <table>
+            <tr class="hover">
+                <th class="hover">Firstname</th>
+            </tr>
+            <tr class="hover">
+                <td class="hover">Peter</td>
+            </tr>
+        </table>
+        <h1>STRIPED TABLES ,TABLE COLOUR</h1>
+        <p>use nth child selector to style and add bgcolour to even/odd table:</p>
+        <table class="striped">
+            <tr class="striped">
+                <th class="striped">Firstname</th>
+            </tr>
+            <tr class="striped">
+                <td class="striped">Peter</td>
+            </tr>
+            <tr class="striped">
+                <td class="striped">Lois</td>
+            </tr>
+        </table>
+        <H1>RESPONSIVE TABLE</H1>
+        <p>A responsive table will display a horizontal scroll bar if the screen is too small to display the full content</p>
+        <h2>Responsive Table</h2>
+        <div style="overflow-x: auto;">
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+            </tr>
+
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+            </tr>
+        </table>
+        </div>
+
+        <H1>CSS LAYOUT</H1>
+        <h1>POSITION</h1>
+        <p>width, max-width and margin: auto</p>
+        <div style="width: 500px; margin: auto; border: 3px solid black;">This div element has width: 500px;</div>
+        <br>
+        <div style="max-width: 500px; margin: auto; border: 3px solid black;">This div element has max-width: 500px;</div>
+        <br>
+        <p>position property</p>
+        <p>static,relative,absolute,fixed,sticky</p>
+        <div class="static">
+        This div element has position: static;
+        </div>
+        <div class="relative">
+        This div element has position: relative;
+        <div class="absolute">This div element has position: absolute;</div>
+        </div>
+        <div class="fixed">
+        This div element has position: fixed;
+        </div>
+        <p>Try to <b>scroll</b> inside this frame to understand how sticky positioning works.</p>
+        <p>Try to <b>scroll</b> inside this frame to understand how sticky positioning works.</p>
+        <div class="sticky">I am sticky!</div>
+        <div style="padding-bottom:2000px">
+        <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.</p>
+        <p>Scroll back up to remove the stickyness.</p>
+        </div>
+        <br>
+        <h2>Z-index property</h2>
+        <h1>This is a heading</h1>
+        <img src="shades.jpg" width="400" height="100">
+        <p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+        <h2>overflow layout</h2>
+        <p>overflow: visible, hidden, scroll, auto</p><br>
+        <div class="visible">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div><br><br><br>
+        <div class="hidden">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box</div><br><br>
+        <div class="scroll">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div><br>
+        <div class="auto">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div><br>
+        <p>overflow -x and overflow -y</p>
+        <p>overflow-x specifies what to do with the left/right edges of the content.</p>
+        <p>overflow-y specifies what to do with the top/bottom edges of the content.</p>
+        <div class="xy">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+        <h2>display: inline</h2>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="default">Aliquam</span> <span class="default">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+        <h2>display: inline-block</h2>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="inline-block">Aliquam</span> <span class="inline-block">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+        <h2>display: block</h2>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="block">Aliquam</span> <span class="block">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+    </body>
+</html>
