@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            input[type=text], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #dfa4a4;
+            border-radius: 4px; /*rounded corners*/
+            box-sizing: border-box;
+            background-color: #ffa3e8; /*background colour*/
+            color: #45a049; /*text colour*/
+            }
+
+            input[type=text]:focus {
+            background-color: #fff0f5; /*background colour when focused*/
+            border: 3px solid #45a049; /*border colour when focused*/
+            }
+
+            input[type=submit] {
+            width: 100%;
+            background-color: #46956d;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            }
+
+            input[type=submit]:hover {
+            background-color: #45a049;
+            }
+
+            div {
+            border-radius: 5px;
+            background-color: #f6e1e1;
+            padding: 20px;
+            }
+            input.search[type=text] {
+            width: 130px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            padding: 12px 20px 12px 40px;
+            background-image: url("coin-cropped.png");
+            background-size: 10px;
+            background-position: 10px 10px; 
+            background-repeat: no-repeat;
+            transition: width 0.4s ease-in-out;
+            }
+            input.search[type=text]:focus {
+            width: 100%;
+            }
+            textarea.ta {
+            width: 100%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #e0b4b4;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            font-size: 16px;
+            resize: none;
+            }
+            select {
+            width: 100%;
+            padding: 16px 20px;
+            border: 1px solid black;
+            border-radius: 4px;
+            background-color: #f1f1f1;
+            }
+            input[type=reset] {
+            background-color: #338c36;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            }
+
+        </style>
+    </head>
+    <body>
+        13th feb
+        topics:
+        <ul>
+            <li>CSS FORMS</li>
+            <li>padded inputs</li>
+            <li>bordered inputs</li>
+            <li>coloured inputs</li>
+            <li>focused inputs</li>
+            <li>focused borders</li>
+            <li>input with icon or image</li>
+            <li>animated search input</li>
+            <li>styling textareas</li>
+            <li>Styling Select Menus</li>
+            <li>Styling Input Buttons</li>
+        </ul>
+        <h1>CSS forms, padded inputs, bordered inputs, coloured inputs, focused inputs, focused borders</h1>
+        <p>can style specific input type using attbt selectors</p>
+        <div>
+            <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <br>
+        <h1>input with icon or image, animated search input</h1>
+        <form>
+            <input class="search" type="text" name="search" placeholder="Search..">
+        </form>
+        <br>
+        <h1>styling textareas</h1>
+        <form>
+        <textarea class="ta">Some text...</textarea>
+        </form>
+
+        <h1>Styling Select Menus</h1>
+        <form>
+        <select id="country" name="country">
+        <option value="au">Australia</option>
+        <option value="ca">Canada</option>
+        <option value="usa">USA</option>
+        </select>
+        </form>
+
+        <h1>Styling Input Buttons</h1>
+        <input type="reset" value="Reset">
+
+    </body>
+</html>
