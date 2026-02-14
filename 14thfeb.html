@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>14th Feb 2026</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+
+        /* Responsive Forms */
+        .form-box {
+            max-width: 400px;
+            background: #f2f2f2;
+            padding: 20px;
+        }
+        input[type=text], input[type=email] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: 1px solid gray;
+        }
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Rounded Corners */
+        .rounded {
+            width: 200px;
+            height: 100px;
+            background: pink;
+            border-radius: 25px;
+            margin: 10px 0;
+        }
+
+        /* Border-radius Each Corner */
+        .corner {
+            width: 200px;
+            height: 100px;
+            background: lightblue;
+            border-radius: 10px 30px 50px 70px;
+        }
+
+        /* Border Image */
+        .border-img {
+            border: 10px solid transparent;
+            border-image: url("border.png") 30 round;
+            padding: 15px;
+            width: 200px;
+        }
+
+        /* Border Image Slice */
+        .border-slice {
+            border-image: url("border.png") 50 stretch;
+        }
+
+        /* Linear Gradients */
+        .linear { height: 100px; background: linear-gradient(red, yellow); }
+        .angle { height: 100px; background: linear-gradient(45deg, red, yellow); }
+        .multi { height: 100px; background: linear-gradient(red, yellow, green); }
+        .transparent { height: 100px; background: linear-gradient(rgba(255,0,0,0.5), rgba(0,0,255,0.5)); }
+        .repeat-linear { height: 100px; background: repeating-linear-gradient(red, yellow 10%, green 20%); }
+
+        /* Radial Gradients */
+        .radial { height: 100px; background: radial-gradient(red, yellow, green); }
+        .shape { height: 100px; background: radial-gradient(circle, red, yellow, green); }
+        .size { height: 100px; background: radial-gradient(closest-side, red, yellow, green); }
+        .repeat-radial { height: 100px; background: repeating-radial-gradient(red, yellow 10%, green 20%); }
+
+        /* Conic Gradients */
+        .conic3 {
+            width: 150px;
+            height: 150px;
+            background: conic-gradient(red, yellow, green);
+            border-radius: 50%;
+        }
+        .conic5 {
+            width: 150px;
+            height: 150px;
+            background: conic-gradient(red, yellow, green, blue, pink);
+            border-radius: 50%;
+        }
+        .pie {
+            width: 150px;
+            height: 150px;
+            background: conic-gradient(red 0deg 90deg, yellow 90deg 180deg, green 180deg);
+            border-radius: 50%;
+        }
+        .from-angle {
+            width: 150px;
+            height: 150px;
+            background: conic-gradient(from 90deg, red, yellow, green);
+            border-radius: 50%;
+        }
+        .center-pos {
+            width: 150px;
+            height: 150px;
+            background: conic-gradient(at 60% 40%, red, yellow, green);
+            border-radius: 50%;
+        }
+        .repeat-conic {
+            width: 150px;
+            height: 150px;
+            background: repeating-conic-gradient(red 10%, yellow 20%);
+            border-radius: 50%;
+        }
+
+        /* Box Shadow */
+        .shadow {
+            width: 200px;
+            padding: 10px;
+            box-shadow: 5px 5px 10px gray;
+        }
+        .multi-shadow {
+            box-shadow: 3px 3px 5px red, -3px -3px 5px blue;
+        }
+
+        /* Cards */
+        .card {
+            width: 200px;
+            box-shadow: 0 4px 8px gray;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .card img { width: 100%; }
+
+        /* Text Effects */
+        .overflow {
+            width: 150px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border: 1px solid black;
+        }
+        .wrap {
+            width: 150px;
+            word-wrap: break-word;
+            border: 1px solid black;
+        }
+        .break {
+            width: 150px;
+            word-break: break-all;
+            border: 1px solid black;
+        }
+        .writing {
+            writing-mode: vertical-rl;
+            border: 1px solid black;
+        }
+
+        /* Transforms */
+        .box {
+            width: 100px;
+            height: 100px;
+            background: coral;
+            margin: 10px;
+        }
+        .translate { transform: translate(20px, 10px); }
+        .rotate { transform: rotate(30deg); }
+        .scale { transform: scale(1.2); }
+        .scaleXY { transform: scaleX(1.5) scaleY(0.8); }
+        .skew { transform: skew(20deg, 10deg); }
+        .matrix { transform: matrix(1, -0.3, 0, 1, 0, 0); }
+        .rotate3d { transform: rotateX(45deg) rotateY(30deg) rotateZ(20deg); }
+
+        /* Transitions */
+        .transition {
+            width: 100px;
+            height: 100px;
+            background: purple;
+            transition: width 2s, background-color 2s ease-in-out 1s;
+        }
+        .transition:hover {
+            width: 200px;
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+<ul>Topics:
+            <li>responsive forms</li>
+            Advanced:
+            <li>rounded corners</li>
+            <li>css border-radius specify each corner</li>
+            <li>css border images</li>
+            <li>CSS border-image Different Slice Values</li>
+            <li>CSS Gradients: linear gradients</li>
+            <li>using angles</li>
+            <li>using multiple colour stops</li>
+            <li>using transparency</li>
+            <li>repeating a linear gradient</li>
+            <li>css radial gradients</li>
+            <li>set shape</li>
+            <li>use the different size keywords</li>
+            <li>repeating a radial-gradient</li>
+            <li>css conic gradients: three colours</li>
+            <li>five colours</li>
+            <li>create pie charts</li>
+            <li>Conic Gradient with Specified From Angle</li>
+            <li>with specified center position</li>
+            <li>repeating a conic gradient</li>
+            <li>css box shadow</li>
+            <li>add multiple shadows</li>
+            <li>text card</li>
+            <li>image card</li>
+            <li>css text effects: css text overflow</li>
+            <li>css word wrapping</li>
+            <li>css word breaking</li>
+            <li>css writing mode</li>
+            <li>css 2D transforms: translate function</li>
+            <li>rotate function</li>
+            <li>scale function</li>
+            <li>The scaleX() Function and scaleY() Function</li>
+            <li>The skewX() Function, skewY() Function and skew() Function</li>
+            <li>The matrix() Function</li>
+            <li>The rotateX() Function</li>
+            <li>The rotateY() Function</li>
+            <li>The rotateZ() function</li>
+            <li>css transition</li>
+            <li>Change Several Property Values</li>
+            <li>Specify the Speed Curve of the Transition</li>
+            <li>Delay the Transition Effect</li>
+            <li>Transition + Transformation</li>
+        </ul> 
+<h2>Responsive Forms</h2>
+<div class="form-box">
+    <input type="text" placeholder="Name">
+    <input type="email" placeholder="Email">
+    <input type="submit">
+</div>
+
+<h2>Rounded Corners</h2>
+<div class="rounded"></div>
+
+<h2>Border Radius Each Corner</h2>
+<div class="corner"></div>
+
+<h2>Border Image</h2>
+<div class="border-img">Border Image</div>
+
+<h2>Border Image Slice</h2>
+<div class="border-img border-slice">Different Slice</div>
+
+<h2>Linear Gradients</h2>
+<div class="linear"></div>
+<div class="angle"></div>
+<div class="multi"></div>
+<div class="transparent"></div>
+<div class="repeat-linear"></div>
+
+<h2>Radial Gradients</h2>
+<div class="radial"></div>
+<div class="shape"></div>
+<div class="size"></div>
+<div class="repeat-radial"></div>
+
+<h2>Conic Gradients</h2>
+<div class="conic3"></div>
+<div class="conic5"></div>
+<div class="pie"></div>
+<div class="from-angle"></div>
+<div class="center-pos"></div>
+<div class="repeat-conic"></div>
+
+<h2>Box Shadow</h2>
+<div class="shadow">Shadow</div>
+<div class="shadow multi-shadow">Multiple</div>
+
+<h2>Cards</h2>
+<div class="card">Text Card</div>
+<div class="card"><img src="shades.jpg">Image Card</div>
+
+<h2>Text Effects</h2>
+<div class="overflow">Overflow example text text text</div>
+<div class="wrap">VeryVeryVeryLongWord</div>
+<div class="break">VeryVeryVeryLongWord</div>
+<div class="writing">Vertical</div>
+
+<h2>Transforms</h2>
+<div class="box translate"></div>
+<div class="box rotate"></div>
+<div class="box scale"></div>
+<div class="box scaleXY"></div>
+<div class="box skew"></div>
+<div class="box matrix"></div>
+<div class="box rotate3d"></div>
+
+<h2>Transitions</h2>
+<div class="transition"></div>
+
+</body>
+</html>
