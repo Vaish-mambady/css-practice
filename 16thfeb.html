@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>16th Feb 2026</title>
+
+    <style>
+        /* ===== CSS ANIMATIONS ===== */
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation: example1 4s;
+        }
+
+        @keyframes example1 {
+            from {background-color: red;}
+            to {background-color: yellow;}
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation: example2 4s;
+        }
+
+        @keyframes example2 {
+            0% {background-color: blue;}
+            50% {background-color: green;}
+            100% {background-color: red;}
+        }
+
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            position: relative;
+            animation: movebox 4s;
+        }
+
+        @keyframes movebox {
+            0% {left: 0px;}
+            100% {left: 200px;}
+        }
+
+        .delay {
+            animation-delay: 2s;
+        }
+
+        .repeat {
+            animation-iteration-count: 3;
+        }
+
+        .reverse {
+            animation-direction: reverse;
+        }
+
+        .alternate {
+            animation-direction: alternate;
+        }
+
+        .alternate-reverse {
+            animation-direction: alternate-reverse;
+        }
+
+        .timing {
+            animation-timing-function: ease-in-out;
+        }
+
+        .fill {
+            animation-fill-mode: forwards;
+        }
+
+        /* ===== IMAGE REFLECTION ===== */
+        .reflect {
+            -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0,0,0,0.5));
+        }
+
+        /* ===== OBJECT FIT ===== */
+        .fit {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        /* ===== PAGINATION ===== */
+        .pagination a {
+            color: black;
+            padding: 8px 16px;
+            text-decoration: none;
+            border: 1px solid #ddd;
+        }
+
+        .pagination a:hover {
+            background-color: #ddd;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        /* ===== MULTIPLE COLUMNS ===== */
+        .columns {
+            column-count: 3;
+            column-gap: 40px;
+            column-rule: 2px solid black;
+        }
+
+        /* ===== RESIZE ===== */
+        .resize {
+            border: 2px solid black;
+            padding: 10px;
+            width: 200px;
+            resize: both;
+            overflow: auto;
+        }
+
+        /* ===== BOX SIZING ===== */
+        .box-no {
+            width: 200px;
+            padding: 20px;
+            border: 5px solid black;
+        }
+
+        .box-yes {
+            width: 200px;
+            padding: 20px;
+            border: 5px solid black;
+            box-sizing: border-box;
+        }
+
+        /* ===== MEDIA QUERY ===== */
+        @media screen and (max-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>CSS Animations</h2>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3 delay"></div>
+    <div class="box3 repeat"></div>
+    <div class="box3 reverse"></div>
+    <div class="box3 alternate"></div>
+    <div class="box3 alternate-reverse timing fill"></div>
+
+    <h2>Image Reflection</h2>
+    <img src="shades.jpg" class="reflect" width="150">
+
+    <h2>Object Fit</h2>
+    <img src="shades.jpg" class="fit">
+
+    <h2>Pagination</h2>
+    <div class="pagination center">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+    </div>
+
+    <h2>Multiple Columns</h2>
+    <div class="columns">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem illum voluptate.
+    </div>
+
+    <h2>CSS Resize</h2>
+    <div class="resize">Resize me</div>
+
+    <h2>Box Sizing</h2>
+    <div class="box-no">Without box-sizing</div><br>
+    <div class="box-yes">With box-sizing</div>
+
+    <h2>Media Query</h2>
+    <p>Resize window to see effect</p>
+</body>
+</html>
