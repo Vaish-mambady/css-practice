@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>17th feb</title>
+
+<style>
+/* ===== COMMON FLEX ITEM STYLE (same across PPT) ===== */
+.flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+  margin-bottom: 30px;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+/* ===== FLEX DIRECTION ===== */
+.row { flex-direction: row; }
+.column { flex-direction: column; }
+.row-reverse { flex-direction: row-reverse; }
+.column-reverse { flex-direction: column-reverse; }
+
+/* ===== FLEX WRAP ===== */
+.wrap { flex-wrap: wrap; }
+.nowrap { flex-wrap: nowrap; }
+.wrap-reverse { flex-wrap: wrap-reverse; }
+
+/* ===== FLEX FLOW ===== */
+.flow { flex-flow: row wrap; }
+
+/* ===== JUSTIFY CONTENT ===== */
+.jc-center { justify-content: center; }
+.jc-start { justify-content: flex-start; }
+.jc-end { justify-content: flex-end; }
+.jc-around { justify-content: space-around; }
+.jc-between { justify-content: space-between; }
+
+/* ===== ALIGN ITEMS ===== */
+.ai-center { align-items: center; height: 200px; }
+.ai-start { align-items: flex-start; height: 200px; }
+.ai-end { align-items: flex-end; height: 200px; }
+.ai-stretch { align-items: stretch; height: 200px; }
+.ai-baseline { align-items: baseline; height: 200px; }
+
+/* ===== FLEX ITEM PROPERTIES ===== */
+.order1 { order: 1; }
+.order2 { order: 2; }
+.order3 { order: 3; }
+
+.grow1 { flex-grow: 1; }
+.grow2 { flex-grow: 2; }
+
+.shrink1 { flex-shrink: 1; }
+.shrink2 { flex-shrink: 2; }
+
+.basis { flex-basis: 200px; }
+
+.flexshort { flex: 1 1 auto; }
+
+.self { align-self: center; }
+
+/* ===== RESPONSIVE FLEXBOX ===== */
+.responsive { flex-wrap: wrap; }
+.responsive > div { width: 300px; }
+
+/* ===== IMAGE GALLERY ===== */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 300px;
+  margin: 10px;
+}
+
+/* ===== WEBSITE LAYOUT ===== */
+.header, .footer {
+  background: #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+}
+
+.sidebar {
+  width: 30%;
+  background: #eee;
+  padding: 20px;
+}
+
+.content {
+  width: 70%;
+  padding: 20px;
+}
+</style>
+</head>
+
+<body>
+Topics:
+    <ul>
+        <li>CSS flexbox: layout mode, components (theory)</li>
+        <li>A Flex Container with Three Flex Items</li>
+        <li>The CSS flex direction property:<li>
+        <ul>
+            <li>row</li>
+            <li>column</li>
+            <li>row-reverse</li>
+            <li>column reverse</li>
+        </ul>
+        <li>CSS flex wrap property:</li>
+        <ul>
+            <li>wrap</li>
+            <li>no-wrap</li>
+            <li>wrap-reverse</li>
+        </ul>
+        <li>CSS flex flow property</li>
+        <li>CSS justify content property:</li>
+        <ul>
+            <li>center</li>
+            <li>flex-start</li>
+            <li>flex-end</li>
+            <li>space around</li>
+            <li>space between</li>
+        </ul>
+        <li>The CSS align-items Property:</li>
+        <ul>
+            <li>center</li>
+            <li>flex-start</li>
+            <li>flex-end</li>
+            <li>stretch</li>
+            <li>baseline</li>
+        </ul>
+        <li>The CSS align-content Property:</li>
+        <ul>
+            <li>center</li>
+            <li>stretch</li>
+            <li>flex-start</li>
+            <li>flex-end</li>
+            <li>space-between</li>
+            <li>space-around</li>
+        </ul>
+        <li>Perfect Centering</li>
+        <li>CSS flex items:</li>
+        <ul>
+            <li>Order</li>
+            <li>flex-grow</li>
+            <li>flex-shrink</li>
+            <li>flex-basis</li>
+            <li>flex</li>
+            <li>align-self</li>
+        </ul>
+        <li>CSS responsive flexbox</li>
+        <li>Responsive Image Gallery using Flexbox</li>
+        <li>Responsive Website using Flexbox</li>
+    </ul>
+<h2>A Flex Container with Three Flex Items</h2>
+<div class="flex-container">
+  <div>1</div><div>2</div><div>3</div>
+</div>
+
+<h2>flex-direction</h2>
+<div class="flex-container row"><div>1</div><div>2</div><div>3</div></div>
+<div class="flex-container column"><div>1</div><div>2</div><div>3</div></div>
+<div class="flex-container row-reverse"><div>1</div><div>2</div><div>3</div></div>
+<div class="flex-container column-reverse"><div>1</div><div>2</div><div>3</div></div>
+
+<h2>flex-wrap</h2>
+<div class="flex-container wrap"><div>1</div><div>2</div><div>3</div><div>4</div></div>
+<div class="flex-container nowrap"><div>1</div><div>2</div><div>3</div><div>4</div></div>
+<div class="flex-container wrap-reverse"><div>1</div><div>2</div><div>3</div><div>4</div></div>
+
+<h2>flex-flow</h2>
+<div class="flex-container flow"><div>1</div><div>2</div><div>3</div><div>4</div></div>
+
+<h2>justify-content</h2>
+<div class="flex-container jc-center"><div>1</div><div>2</div></div>
+<div class="flex-container jc-start"><div>1</div><div>2</div></div>
+<div class="flex-container jc-end"><div>1</div><div>2</div></div>
+<div class="flex-container jc-around"><div>1</div><div>2</div></div>
+<div class="flex-container jc-between"><div>1</div><div>2</div></div>
+
+<h2>align-items</h2>
+<div class="flex-container ai-center"><div>1</div><div>2</div></div>
+<div class="flex-container ai-start"><div>1</div><div>2</div></div>
+<div class="flex-container ai-end"><div>1</div><div>2</div></div>
+<div class="flex-container ai-stretch"><div>1</div><div>2</div></div>
+<div class="flex-container ai-baseline"><div>1</div><div>2</div></div>
+
+<h2>Flex item properties</h2>
+<div class="flex-container">
+  <div class="order2">2</div>
+  <div class="order1">1</div>
+  <div class="order3">3</div>
+</div>
+
+<div class="flex-container">
+  <div class="grow1">Grow 1</div>
+  <div class="grow2">Grow 2</div>
+</div>
+
+<div class="flex-container">
+  <div class="basis">Basis</div>
+  <div class="flexshort">Flex</div>
+  <div class="self">Align Self</div>
+</div>
+
+<h2>CSS Responsive Flexbox</h2>
+<div class="flex-container responsive">
+  <div>Box</div><div>Box</div><div>Box</div><div>Box</div>
+</div>
+
+<h2>Responsive Image Gallery using Flexbox</h2>
+<div class="gallery">
+  <img src="https://via.placeholder.com/300">
+  <img src="https://via.placeholder.com/300">
+  <img src="https://via.placeholder.com/300">
+</div>
+
+<h2>Responsive Website using Flexbox</h2>
+<div class="header">Header</div>
+<div class="main">
+  <div class="sidebar">Sidebar</div>
+  <div class="content">Main Content</div>
+</div>
+<div class="footer">Footer</div>
+
+</body>
+</html>
